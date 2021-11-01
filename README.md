@@ -15,5 +15,5 @@
 **Install R & RStudio and the `tidyverse` (expected install/test time: ~10 minutes)**
 1) If you have not yet installed R and/or RStudio (you will need both), follow the steps outlined [here](https://docs.google.com/document/d/1KLYC_GcDLYeczSjJmZ5h4y525XILJbbL6r2-MxGCdtw/edit?usp=sharing).
 2) We will be using the [{tidyverse}](https://www.tidyverse.org/) (a collection of packages designed for data science, particularly useful for data wrangling and visualization). If you do not yet have the {tidyverse} installed, run the following line of code in your RStudio Console: `install.packages("tidyverse")`
-3) We encourage you to test that your installations are working as expected. Follow [these instructions]() to ensure a smooth workshop ahead!
+3) We encourage you to test that your installations are working as expected. Follow [these instructions](https://docs.google.com/document/d/1ItQy91G6QfKaX1-26lracpSbJ52JUie1HZb54LCa9sM/edit?usp=sharing) to ensure a smooth workshop ahead!
 
