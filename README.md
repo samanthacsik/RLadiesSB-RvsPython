@@ -20,7 +20,9 @@
 ### Install Python & Anaconda (expected install/test time: ~X minutes)
 
 ### Install git/GitHub (expected install time: ~5 minutes)  
-1) If you are not already using git/GitHub for version control, we recommend you get set up by following the steps outlined [here](https://docs.google.com/document/d/1AQ4zAYxPHOObq-snnnRtEdwCC8TwIJsTHwpaKyvEyoA/edit?usp=sharing)
+1) If you are not already using git/GitHub for version control, we recommend you get set up by following the steps outlined [here](https://docs.google.com/document/d/1AQ4zAYxPHOObq-snnnRtEdwCC8TwIJsTHwpaKyvEyoA/edit?usp=sharing). Doing so will allow you to clone (i.e. copy to your computer) the GitHub repositories containing all the data and scripts that you need to follow along with us (steps for cloning a GitHub repository can be found [below]()).
+
+## Clone workshop repos to your computer
 
 ## Data
 
