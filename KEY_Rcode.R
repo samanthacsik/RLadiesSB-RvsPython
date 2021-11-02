@@ -67,6 +67,7 @@ finalized_plot <- ggplot(tidy_counts2, aes(x = num_colors, y = num_words)) +
 
 finalized_plot
 
+# ggsave("Rplot.png", plot = finalized_plot, width = 6, height = 6)
 
 
 
