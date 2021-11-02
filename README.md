@@ -22,3 +22,16 @@
 ### Install git/GitHub (expected install time: ~5 minutes)  
 1) If you are not already using git/GitHub for version control, we recommend you get set up by following the steps outlined [here](https://docs.google.com/document/d/1AQ4zAYxPHOObq-snnnRtEdwCC8TwIJsTHwpaKyvEyoA/edit?usp=sharing)
 
+## Data
+
+We will be using ugly holiday sweater data crowdsourced from R-Ladies (and friends) in November/December 2020. If you would like to contribute your own ugly holiday sweater info to this dataset, please fill out this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSd37uWHUgp-Gd5833ECGXdszKLBV6kpdpigT-yIMTXkCwyKXg/viewform)! See a summary of the data attributes here:
+
+* `sweater`: entry number
+* `hs_tf`: Do you have a holiday sweater? (Yes/No/NA)
+* `sparkly`: is it sparkly? (Yes/No/NA)
+* `noise`: does it make noise? (Yes/No/NA)
+* `lights`: does it light up? (Yes/No/NA)
+* `objects`: does it have anything attached to it? (Yes/No/NA)
+* `colors`: What colors does it have? 
+* `image_tf`: Does it have an image on it? (Yes/No/NA)
+* `image_desc`: User-provided image description
