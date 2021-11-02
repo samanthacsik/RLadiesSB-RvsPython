@@ -60,10 +60,7 @@ finalized_plot <- ggplot(tidy_counts2, aes(x = num_colors, y = num_words)) +
   labs(x = "Number of colors on sweater", 
        y = "Number of words in sweater description",
        title = str_wrap("Relationship between the number of colors and length of description for ugly holiday sweaters", 60)) +
-  theme_classic() +
-  theme(
-    
-  )
+  theme_classic()
 
 finalized_plot
 
