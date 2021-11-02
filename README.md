@@ -35,3 +35,9 @@ We will be using ugly holiday sweater data crowdsourced from R-Ladies (and frien
 * `colors`: What colors does it have? 
 * `image_tf`: Does it have an image on it? (Yes/No/NA)
 * `image_desc`: User-provided image description
+
+## Objective
+
+We will use both R's [tidyverse](https://www.tidyverse.org/) packages and Python's **XYZ** libraries to demonstrate how you might wrangle the [ulgy sweater data](https://github.com/samanthacsik/RLadiesSB-RvsPython/blob/main/holiday_sweaters_2020_clean.csv) and create this plot: 
+
+[insert image of plot here]
