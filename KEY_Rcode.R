@@ -16,8 +16,8 @@ sweaters <- read_csv(here::here("holiday_sweaters_2020_clean.csv")) %>%
 tidy_colors <- sweaters %>% 
   tidyr::separate_rows(colors, sep = c(", ")) %>% 
   tidyr::separate_rows(colors, sep = c(" and ")) %>% 
-  group_by(sweater) %>% 
-  summarize(num_colors = length(sweater))
+  dplyr::group_by(sweater) %>% 
+  dplyr::summarize(num_colors = length(sweater))
 
 #..................wrangle sweater descriptions..................
 # 1) tidy colors (1 word per row)
@@ -27,12 +27,12 @@ tidy_colors <- sweaters %>%
 
 tidy_descriptions <- sweaters %>% 
   tidyr::separate_rows(image_desc, sep = c(" ")) %>% 
-  group_by(sweater) %>% 
-  summarize(num_words = length(sweater))
+  dplyr::group_by(sweater) %>% 
+  dplyr::summarize(num_words = length(sweater))
 
 #........................join data frames.........................
 
-tidy_counts <- full_join(tidy_descriptions, tidy_colors)
+tidy_counts <- dplyr::full_join(tidy_descriptions, tidy_colors)
 
 #....................create exploratory plot.....................
 
@@ -44,7 +44,7 @@ exploratory_plot
 #.........................remove outlier.........................
 
 tidy_counts2 <- tidy_counts %>% 
-  filter(!sweater %in% c("sweater87", "sweater7"))
+  dplyr::filter(!sweater %in% c("sweater87", "sweater7"))
 
 #........................fit linear model........................
 
