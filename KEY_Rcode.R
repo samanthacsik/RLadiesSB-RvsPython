@@ -1,11 +1,29 @@
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                                                                            ~~
+##                        STEP 1: LOAD PACKAGES & DATA                      ----
+##                                                                            ~~
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #..........................load packages.........................
 
 library(tidyverse)
 
 #..........................read in data..........................
 
-sweaters <- read_csv(here::here("holiday_sweaters_2020_clean.csv")) %>% 
+sweaters <- read_csv(here::here("ugly_sweaters.csv")) %>% 
   dplyr::filter(hs_tf == "Yes") # filter data for those that actually have a sweater
+
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                                                                            ~~
+##                        STEP 2: WRANGLE/PROCESS DATA                      ----
+##                                                                            ~~
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #.....................wrangle sweater colors.....................
 # 1) tidy colors (1 color per row)
@@ -34,26 +52,24 @@ tidy_descriptions <- sweaters %>%
 
 tidy_counts <- dplyr::full_join(tidy_descriptions, tidy_colors)
 
-#....................create exploratory plot.....................
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                                                                            ~~
+##                           STEP 3: VISUALIZE DATA                         ----
+##                                                                            ~~
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-exploratory_plot <- ggplot(tidy_counts, aes(x = num_colors, y = num_words)) +
+#....................create basic scatterplot....................
+
+simple_plot <- ggplot(tidy_counts, aes(x = num_colors, y = num_words)) +
   geom_jitter(size = 3, alpha = 0.5) 
 
-exploratory_plot
+simple_plot
 
-#.........................remove outlier.........................
+#..............create slightly fancier scatterplot...............
 
-tidy_counts2 <- tidy_counts %>% 
-  dplyr::filter(!sweater %in% c("sweater87", "sweater7"))
-
-#........................fit linear model........................
-
-sweater_lm <- lm(data = tidy_counts, num_words ~ num_colors)
-summary(sweater_lm)
-
-#......................create finalized plot.....................
-
-finalized_plot <- ggplot(tidy_counts2, aes(x = num_colors, y = num_words)) +
+fancy_plot <- ggplot(tidy_counts, aes(x = num_colors, y = num_words)) +
   geom_jitter(size = 3, alpha = 0.5) +
   scale_x_continuous(breaks = seq(from = 2, to = 8, by = 2)) +
   geom_smooth(method = lm, se = TRUE, size = 0.5, color = "black") +
@@ -62,7 +78,7 @@ finalized_plot <- ggplot(tidy_counts2, aes(x = num_colors, y = num_words)) +
        title = str_wrap("Relationship between the number of colors and length of description for ugly holiday sweaters", 60)) +
   theme_classic()
 
-finalized_plot
+fancy_plot
 
 # ggsave("Rplot.png", plot = finalized_plot, width = 6, height = 6)
 
