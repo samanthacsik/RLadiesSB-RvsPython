@@ -1,4 +1,4 @@
-# R-Ladies SB x Central Coast Python Collab - Data Wrangling and Viz 
+# R-Ladies SB x Central Coast Python - Data Science with R & Python
 
 **NOTE:** This README is currently under construction
 
@@ -11,6 +11,8 @@
 - **Event Location:** Zoom link available upon RSVP and optional in-person attendance at the National Center for Ecological Analysis & Synthesis (NCEAS)
 
 - **RSVP:** [R-Ladies SB Meetup Event](link here) (Python allies can RSVP at [Central Coast Python Meetup Event](link here))
+
+- **Other Materials:** Find our Google Slides presented during the Meetup [here](https://docs.google.com/presentation/d/1jXb8wbcP2f7flSfLMoX2gui70G67XRjftJRMLselOlE/edit?usp=sharing) 
 
 ## Software Installation & Setup Instructions
 
