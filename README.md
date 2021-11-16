@@ -6,11 +6,7 @@
 
 - **Event Description:** Mark you calendars for a first-of-its-kind R-Ladies SB x [Central Coast Python](https://www.meetup.com/central-coast-python/ble) Meetup on December 15th! Python can be a powerful alternative/complementary language to R, and while we here at R-Ladies are certainly partial to the latter, adding another language to our data science toolkit is something we are always excited for. We have collaborated with Central Coast Python to bring you an R to Python (and vice versa) translation workshop, where we will learn to wrangle and visualize the same dataset using both languages. You may choose to follow along on our screens or download the required software and packages to code along on your own machines. If you do not already have R and Python installed, please be sure to do so before the event on December 15th (see **[Software Installation Instructions](https://github.com/samanthacsik/RLadiesSB-RvsPython/blob/main/README.md#software-installation-instructions)** below). 
 
-- **Event Date:** December 15, 2021 at 17:30-19:00PT & office hours for software installation help on December 07, 2021 at 17:30-18:30PT
-
-- **Event Location:** Zoom link available upon RSVP and optional in-person attendance at the National Center for Ecological Analysis & Synthesis (NCEAS)
-
-- **RSVP:** [R-Ladies SB Meetup Event](link here) (Python allies can RSVP at [Central Coast Python Meetup Event](link here))
+- **RSVP & Event Details:** [R-Ladies SB Meetup Event](link here) (Python allies can RSVP at [Central Coast Python Meetup Event](link here))
 
 - **Other Materials:** Find our Google Slides presented during the Meetup [here](https://docs.google.com/presentation/d/1jXb8wbcP2f7flSfLMoX2gui70G67XRjftJRMLselOlE/edit?usp=sharing) 
 
@@ -30,9 +26,14 @@ Please complete the following steps to install all necessary software and packag
 ### Install git/GitHub (expected install time: ~5 minutes)  
 1) If you are not already using git/GitHub for version control, we recommend you get set up by following the steps outlined [here](https://docs.google.com/document/d/1AQ4zAYxPHOObq-snnnRtEdwCC8TwIJsTHwpaKyvEyoA/edit?usp=sharing). Doing so will allow you to clone (i.e. copy to your computer) the GitHub repositories containing all the data and scripts that you need to follow along with us (steps for cloning a GitHub repository can be found [below](https://github.com/samanthacsik/RLadiesSB-RvsPython/blob/main/README.md#clone-workshop-repos-to-your-computer)).
 
-### Clone workshop repositories to your computer
+### Fork & Clone workshop repositories to your computer
 
-*STILL NEED TO ADD THIS*
+If you would like to follow along with us during the workhshop, you will need to fork and clone **two** repositories:
+
+1) This repo, which contains all R code for the workshop: https://github.com/samanthacsik/RLadiesSB-RvsPython
+2) The Central Coast Python repo, which contains all Python code for the workshop: _____________
+
+You can find detailed instructions on how to fork and clone repositories [here](https://docs.google.com/document/d/16aM5B4B3WRc1YbcYrFlk_IOX1YV5ITnMWxNpCQFb8Qk/edit?usp=sharing).
 
 ## Data
 
