@@ -14,7 +14,7 @@
 
 ## Software Installation & Setup Instructions
 
-Please complete the following steps to install all necessary software and packages prior to our meetup on 12/17.
+Please complete the following steps to install all necessary software and packages prior to our meetup on 12/15.
 
 ### Install R & RStudio and the `tidyverse` (expected install/test time: ~10-15 minutes)
 1) If you have not yet installed R and/or RStudio (you will need both), follow the steps outlined [here](https://docs.google.com/document/d/1KLYC_GcDLYeczSjJmZ5h4y525XILJbbL6r2-MxGCdtw/edit?usp=sharing)
