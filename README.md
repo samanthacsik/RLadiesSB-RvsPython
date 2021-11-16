@@ -33,7 +33,7 @@ Please complete the following steps to install all necessary software and packag
 If you would like to follow along with us during the workhshop, you will need to fork and clone **two** repositories:
 
 1) This repo, which contains all R code for the workshop: https://github.com/samanthacsik/RLadiesSB-RvsPython
-2) The Central Coast Python repo, which contains all Python code for the workshop: _____________
+2) The Central Coast Python repo, which contains all Python code for the workshop: https://github.com/seanhelvey/IntroToPythonForRUsers
 
 You can find detailed instructions on how to fork and clone repositories [here](https://docs.google.com/document/d/16aM5B4B3WRc1YbcYrFlk_IOX1YV5ITnMWxNpCQFb8Qk/edit?usp=sharing).
 
