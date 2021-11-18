@@ -53,7 +53,7 @@ We will be using ugly holiday sweater data crowdsourced from R-Ladies (and frien
 
 ## Objective
 
-We will use both R's [tidyverse](https://www.tidyverse.org/) packages and Python's [Pandas](https://pandas.pydata.org/) & **?** libraries to demonstrate how you might wrangle the [ulgy sweater data](https://github.com/samanthacsik/RLadiesSB-RvsPython/blob/main/holiday_sweaters_2020_clean.csv) and create this plot: 
+We will use both R's [tidyverse](https://www.tidyverse.org/) packages and Python's [Pandas](https://pandas.pydata.org/) library to demonstrate how you might wrangle the [ulgy sweater data](https://github.com/samanthacsik/RLadiesSB-RvsPython/blob/main/holiday_sweaters_2020_clean.csv) and create this plot: 
 
 ![Rplot](https://user-images.githubusercontent.com/43836046/139956835-7af0e1c4-ea85-4266-9821-9dca101b053f.png)
 
