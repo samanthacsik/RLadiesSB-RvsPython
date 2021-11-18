@@ -8,7 +8,7 @@ Mark you calendars for a first-of-its-kind R-Ladies SB x [Central Coast Python](
 
    *This event is open to R and/or Python enthusiasts of all skill-levels!*
 
-- **RSVP & Event Details:** [R-Ladies SB Meetup Event](link here) (Python allies can RSVP at [Central Coast Python Meetup Event](link here))
+- **RSVP & Event Details:** [R-Ladies SB Meetup Event](https://www.meetup.com/rladies-santa-barbara/events/281807986/) (Python allies can RSVP at [Central Coast Python Meetup Event](link here))
 
 - **Other Materials:** Find our Google Slides presented during the Meetup [here](https://docs.google.com/presentation/d/1jXb8wbcP2f7flSfLMoX2gui70G67XRjftJRMLselOlE/edit?usp=sharing) 
 
