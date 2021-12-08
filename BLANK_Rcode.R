@@ -14,7 +14,6 @@
 #..........................read in data..........................
 
 
-
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ##                                                                            ~~
@@ -35,7 +34,10 @@
 # 2) group by sweater ID
 # 3) calculate how many colors each sweater has on it
 
-
+tidy_descriptions <- sweaters %>% 
+  separate_rows(image_desc, sep = c(" "))  %>% 
+  group_by(sweater) %>% 
+  summarize(num_words = length(sweater))
 
 #........................join data frames.........................
 
@@ -55,4 +57,11 @@
 
 #..............create slightly fancier scatterplot...............
 
+fancy_plot <- ggplot(tidy_counts, aes(x = num_colors, y = num_words)) +
+  geom_jitter(size = 3, alpha = 0.5) +
+  scale_x_continuous() +
+  geom_smooth() +
+  labs() +
+  theme_classic()
 
+fancy_plot

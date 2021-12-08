@@ -13,9 +13,8 @@ library(tidyverse)
 
 #..........................read in data..........................
 
-sweaters <- read_csv(here::here("ugly_sweaters.csv")) %>% 
-  dplyr::filter(hs_tf == "Yes") # filter data for those that actually have a sweater
-
+sweaters <- read_csv("ugly_sweaters.csv") %>% 
+  dplyr::filter(hs_tf == "Yes") # filter data for those that actually report having a sweater
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
