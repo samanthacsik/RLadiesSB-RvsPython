@@ -35,7 +35,7 @@
 # 3) calculate how many colors each sweater has on it
 
 tidy_descriptions <- sweaters %>% 
-  separate_rows(image_desc, sep = c(" "))  %>% 
+  separate_rows(image_desc, sep = " ")  %>% 
   group_by(sweater) %>% 
   summarize(num_words = length(sweater))
 

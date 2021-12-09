@@ -30,8 +30,8 @@ sweaters <- read_csv("ugly_sweaters.csv") %>%
 # 3) calculate how many colors each sweater has on it
 
 tidy_colors <- sweaters %>% 
-  tidyr::separate_rows(colors, sep = c(", ")) %>% 
-  tidyr::separate_rows(colors, sep = c(" and ")) %>% 
+  tidyr::separate_rows(colors, sep = ", ") %>% 
+  tidyr::separate_rows(colors, sep = " and ") %>% 
   dplyr::group_by(sweater) %>% 
   dplyr::summarize(num_colors = length(sweater))
 
@@ -41,7 +41,7 @@ tidy_colors <- sweaters %>%
 # 3) calculate how many colors each sweater has on it
 
 tidy_descriptions <- sweaters %>% 
-  tidyr::separate_rows(image_desc, sep = c(" ")) %>% 
+  tidyr::separate_rows(image_desc, sep = " ") %>% 
   dplyr::group_by(sweater) %>% 
   dplyr::summarize(num_words = length(sweater))
 
