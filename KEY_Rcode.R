@@ -36,7 +36,7 @@ tidy_colors <- sweaters %>%
   dplyr::summarize(num_colors = length(sweater))
 
 #..................wrangle sweater descriptions..................
-# 1) tidy colors (1 word per row)
+# 1) tidy descriptions (1 word per row)
 # 2) group by sweater ID
 # 3) calculate how many colors each sweater has on it
 
