@@ -90,12 +90,9 @@ plot(all_counts$count.y ~ jitter(all_counts$count.x, 1),
 
 #..............create slightly fancier scatterplot...............
 
-# calculate standard error
-summary(lm(formula = all_counts$count.y ~ all_counts$count.x))
-
-# plot (doesn't include confidence intervals)
+# (doesn't include confidence intervals)
 plot(all_counts$count.y ~ jitter(all_counts$count.x, 1),
-     pch = 1, cex = 1.5, col = "gray48", # change point shape, size, color
+     pch = 1, cex = 1.5, col = "gray48", 
      main = "Relationship between the number of colors and length of \ndescription for ugly holiday sweaters", cex.main = 0.8, 
      xlab = "Number of colors on sweater", ylab = "Number of words in sweater description", cex.lab = 0.8) 
 abline(lm(formula = all_counts$count.y ~ all_counts$count.x))
