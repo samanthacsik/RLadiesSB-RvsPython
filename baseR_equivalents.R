@@ -29,7 +29,6 @@ sweaters <- read.csv("ugly_sweaters.csv")
 sweaters_yes_option1 <- subset(sweaters, hs_tf == "Yes")
 sweaters_yes_option2 <- sweaters[which(sweaters$hs_tf == "Yes"), , drop = FALSE]
 
-
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ##                            count sweater colors                          ----
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -73,10 +72,8 @@ word_counts <- aggregate(cbind(count = words) ~ sweater,
 all_counts <- merge(x = color_counts, y = word_counts, by = "sweater", all = TRUE)
 all_counts[is.na(all_counts)] = 0
 
-# ADDRESS THIS
+# convert count.x (color_counts) to numeric
 all_counts$count.x <- as.numeric(all_counts$count.x)
-colors <- all_counts$count.x
-words <- all_counts$count.y
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -88,25 +85,20 @@ words <- all_counts$count.y
 
 #....................create basic scatterplot....................
 
-# NEED TO FIX (currently getting an error when using all_counts df for plotting)
-simple_plot <- plot(words ~ jitter(colors, 1), 
-                    pch = 19, cex = 1.5, col = "gray48")
-
-simple_plot
+plot(all_counts$count.y ~ jitter(all_counts$count.x, 1),
+     pch = 1, cex = 1.5, col = "gray48")
 
 #..............create slightly fancier scatterplot...............
 
-fancy_plot <- plot(words ~ jitter(colors, 1), 
-                  pch = 19, cex = 1.5, col = "gray48",
-                  main = "Relationship between the number of colors and length of description for ugly holiday sweaters")
+# calculate standard error
+summary(lm(formula = all_counts$count.y ~ all_counts$count.x))
 
-# fancy_plot <- ggplot(tidy_counts, aes(x = num_colors, y = num_words)) +
-#   geom_jitter(size = 3, alpha = 0.5) +
-#   scale_x_continuous(breaks = seq(from = 2, to = 8, by = 2)) +
-#   geom_smooth(method = lm, se = TRUE, size = 0.5, color = "black") +
-#   labs(x = "Number of colors on sweater", 
-#        y = "Number of words in sweater description",
-#        title = str_wrap("Relationship between the number of colors and length of description for ugly holiday sweaters", 60)) +
-#   theme_classic()
+# plot (doesn't include confidence intervals)
+plot(all_counts$count.y ~ jitter(all_counts$count.x, 1),
+     pch = 1, cex = 1.5, col = "gray48", # change point shape, size, color
+     main = "Relationship between the number of colors and length of \ndescription for ugly holiday sweaters", cex.main = 0.8, 
+     xlab = "Number of colors on sweater", ylab = "Number of words in sweater description", cex.lab = 0.8) 
+abline(lm(formula = all_counts$count.y ~ all_counts$count.x))
 
-fancy_plot
+
+
