@@ -58,7 +58,7 @@ tidy_descriptions <- sweaters %>%
 #..............create slightly fancier scatterplot...............
 
 fancy_plot <- ggplot(tidy_counts, aes(x = num_colors, y = num_words)) +
-  geom_jitter(size = 3, alpha = 0.5) +
+  geom_jitter() +
   scale_x_continuous() +
   geom_smooth() +
   labs() +

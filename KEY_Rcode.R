@@ -60,7 +60,7 @@ tidy_counts <- dplyr::full_join(tidy_descriptions, tidy_colors)
 #....................create basic scatterplot....................
 
 simple_plot <- ggplot(tidy_counts, aes(x = num_colors, y = num_words)) +
-  geom_jitter(size = 3, alpha = 0.5) 
+  geom_jitter() 
 
 simple_plot
 
