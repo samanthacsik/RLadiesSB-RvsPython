@@ -72,9 +72,6 @@ word_counts <- aggregate(cbind(count = words) ~ sweater,
 all_counts <- merge(x = color_counts, y = word_counts, by = "sweater", all = TRUE)
 all_counts[is.na(all_counts)] = 0
 
-# convert count.x (color_counts) to numeric
-all_counts$count.x <- as.numeric(all_counts$count.x)
-
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ##                                                                            ~~
@@ -82,6 +79,10 @@ all_counts$count.x <- as.numeric(all_counts$count.x)
 ##                                                                            ~~
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ #.....convert count.x (color_counts) to numeric for plotting.....
+
+all_counts$count.x <- as.numeric(all_counts$count.x)
 
 #....................create basic scatterplot....................
 
