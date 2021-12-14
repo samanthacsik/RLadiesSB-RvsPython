@@ -55,7 +55,7 @@ color_counts <- aggregate(cbind(count = colors) ~ sweater,
 
 #..................tidy descriptions (1 word per row).................
 
-# separate by ','
+# separate by ' '
 sweater_words_list <- strsplit(sweaters_yes_option1$image_desc, split = c(" "))
 sweater_words <- data.frame(sweater = rep(sweaters_yes_option1$sweater, sapply(sweater_words_list, length)), words = unlist(sweater_words_list))
 
