@@ -33,7 +33,7 @@ tidy_colors <- sweaters %>%
   tidyr::separate_rows(colors, sep = ", ") %>% 
   tidyr::separate_rows(colors, sep = " and ") %>% 
   dplyr::group_by(sweater) %>% 
-  dplyr::summarize(num_colors = length(sweater))
+  dplyr::summarize(num_colors = length(sweater))  # `dplyr::count(sweaters)` is another option here, but you'll probably want to rename your new column
 
 #..................wrangle sweater descriptions..................
 # 1) tidy descriptions (1 word per row)
@@ -43,7 +43,7 @@ tidy_colors <- sweaters %>%
 tidy_descriptions <- sweaters %>% 
   tidyr::separate_rows(image_desc, sep = " ") %>% 
   dplyr::group_by(sweater) %>% 
-  dplyr::summarize(num_words = length(sweater))
+  dplyr::summarize(num_words = length(sweater)) 
 
 #........................join data frames.........................
 
