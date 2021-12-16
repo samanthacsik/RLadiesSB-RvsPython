@@ -1,10 +1,17 @@
 # R-Ladies SB x Central Coast Python - Data Science with R & Python
 
-Mark you calendars for a first-of-its-kind R-Ladies SB x [Central Coast Python](https://www.meetup.com/central-coast-python/ble) Meetup on December 15th!
+## All Event Materials:
+* R-Ladies GitHub Repo: https://github.com/samanthacsik/RLadiesSB-RvsPython
+* Central Coast Python GitHub Repo: https://github.com/seanhelvey/IntroToPythonForRUsers
+* Google Slides: https://bit.ly/3q5pC0i
+* Event Recording: https://bit.ly/3sg4CH0
+* Zoom Chat: https://bit.ly/3H5fUCn
+
+--- 
 
 ## Meetup Details
 
-- **Event Description:** Python can be a powerful alternative/complementary language to R, and while we here at R-Ladies are certainly partial to the latter, adding another language to our data science toolkit is something we are always excited for. We have collaborated with Central Coast Python to bring you an R to Python (and vice versa) translation workshop, where we will learn to wrangle and visualize the same dataset using both languages. You may choose to follow along on our screens or download the required software and packages to code along on your own machines. If you do not already have R and Python installed, please be sure to do so before the event on December 15th (see **[Software Installation Instructions](https://github.com/samanthacsik/RLadiesSB-RvsPython/blob/main/README.md#software-installation-instructions)** below). 
+- **Event Description:** Mark you calendars for a first-of-its-kind R-Ladies SB x [Central Coast Python](https://www.meetup.com/central-coast-python/ble) Meetup on December 15th! Python can be a powerful alternative/complementary language to R, and while we here at R-Ladies are certainly partial to the latter, adding another language to our data science toolkit is something we are always excited for. We have collaborated with Central Coast Python to bring you an R to Python (and vice versa) translation workshop, where we will learn to wrangle and visualize the same dataset using both languages. You may choose to follow along on our screens or download the required software and packages to code along on your own machines. If you do not already have R and Python installed, please be sure to do so before the event on December 15th (see **[Software Installation Instructions](https://github.com/samanthacsik/RLadiesSB-RvsPython/blob/main/README.md#software-installation-instructions)** below). 
 
    *This event is open to R and/or Python enthusiasts of all skill-levels!*
 
