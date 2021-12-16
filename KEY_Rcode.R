@@ -67,7 +67,7 @@ simple_plot
 #..............create slightly fancier scatterplot...............
 
 fancy_plot <- ggplot(tidy_counts, aes(x = num_colors, y = num_words)) +
-  geom_jitter(size = 3, alpha = 0.5) +
+  geom_jitter(size = 3, alpha = 0.5, width = 0.1) +
   scale_x_continuous(breaks = seq(from = 2, to = 8, by = 2)) +
   geom_smooth(method = lm, se = TRUE, size = 0.5, color = "black") +
   labs(x = "Number of colors on sweater", 
